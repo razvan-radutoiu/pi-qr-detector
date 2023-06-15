@@ -12,7 +12,7 @@ GPIO.output(15,GPIO.LOW)
 
 
 #API_KEY de la Google Safe Browsing API
-s = SafeBrowsing('AIzaSyD7WLC7dCjgDQ_3HM75mGdrpaZRb_HBWi8')
+s = SafeBrowsing('XXXXXXXXXXXXXXXXXXXXXXXXX')
 
 cap = cv2.VideoCapture(0)
 
