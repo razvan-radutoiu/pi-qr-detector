@@ -11,12 +11,12 @@ GPIO.setup(15,GPIO.OUT) #RED LED
 GPIO.output(15,GPIO.LOW)
 
 
-#API_KEY de la Google Safe Browsing API
-s = SafeBrowsing('XXXXXXXXXXXXXXXXXXXXXXXXX')
+#Google Safe Browsing API
+s = SafeBrowsing('<your_api_key>')
 
 cap = cv2.VideoCapture(0)
 
-# metoda de detectie a codului QR
+
 detector = cv2.QRCodeDetector()
 
 while True:
@@ -25,7 +25,7 @@ while True:
     
     data, bbox, _ = detector.detectAndDecode(img)
     
-    #Cutie albastra + data
+    
     if(bbox is not None):
         for i in range(len(bbox)):
             cv2.line(img, tuple(bbox[i][0]), tuple(bbox[(i+1) % len(bbox)][0]), color=(255,
@@ -33,11 +33,11 @@ while True:
         cv2.putText(img, data, (int(bbox[0][0][0]), int(bbox[0][0][1]) - 10), cv2.FONT_HERSHEY_SIMPLEX,
                     1, (42, 73, 228), 2)
         
-        #Printarea datelor in terminal + cod control pini
+        
         
         if data:
             
-            print("Data gasita: ", data)
+            print("Data found: ", data)
             r = s.lookup_urls([data])
           
             value = True
