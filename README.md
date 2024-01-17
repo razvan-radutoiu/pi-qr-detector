@@ -49,7 +49,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contributing
 
-Feel free to contribute to the project by opening issues or submitting pull requests. Follow the [Contribution Guidelines](CONTRIBUTING.md) for more information.
+Feel free to contribute to the project by opening issues or submitting pull requests. Follow the Contribution Guidelines for more information.
 
 ## Acknowledgments
 
